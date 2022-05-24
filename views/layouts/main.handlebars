@@ -1,23 +1,26 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Tech Blog</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <div>
+  <div class="wrapper">
     <header>
       <h1>
-        <a href="/">Just Tech News</a>
+        <a href="/">Tech Blog</a>
       </h1>
       <nav>
+        {{#if loggedIn}}
         <a href="/dashboard">dashboard</a>
         <button id="logout" class="btn-no-style">logout</button>
-        <a href="/login">login</a> 
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
       </nav>
     </header>
     <main>
@@ -28,9 +31,9 @@
     </footer>
   </div>
   
-  
+  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  
+  {{/if}}
 </body>
 
 </html>
