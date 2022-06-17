@@ -1,16 +1,19 @@
+<div class="list-group-item list-bg border border-3 m-4">
 {{> post-info post}}
+</div>
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+<form class="comment-form border border-3 border-light rounded p-4 m-4 shadow">
+  <div class="input-group mb-3">
+    <textarea class="form-control" name="comment-body"></textarea>
   </div>
 
-  <div>
-    <button type="submit">add comment</button>
+  <div class="input-group mb-3">
+    <button class="btn btn-primary" type="submit">add comment</button>
   </div>
 </form>
 {{/if}}
+
 
 {{> comments post.comments}}
 
@@ -18,3 +21,7 @@
 <script src="/javascript/comment.js"></script>
 
 {{/if}}
+
+
+
+

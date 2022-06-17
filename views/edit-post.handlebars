@@ -1,28 +1,30 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
+<article class= "p-2 m-2">
+  <a href="/dashboard" class="p-2"> &larr; Back to dashboard</a>
+  <h2 class="m-4">
     Edit Post
   </h2>
-  <form class="edit-post-form">
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <p>({{post.post_text}})</p>
+  <form class="edit-post-form border border-3 border-light rounded pb-0 p-4 m-4 shadow">
+    <div class="input-group mb-3">
+      <input class="form-control" name="post-title" type="text" value="{{post.title}}"/>   
     </div>
-    <div>
+    <p class="fw-semibold">( {{post.post_text}} )</p>
+    <div class="input-group mb-3">
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
+    <div class="input-group mb-3">
+    <button class="btn btn-primary" type="submit">Save post</button>
+    <button type="button" class="delete-post-btn btn btn-danger">Delete post</button>
+    </div>
   </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+<form class="comment-form border border-3 border-light rounded p-4 m-4 shadow">
+  <div class="input-group mb-3">
+    <textarea class="form-control" name="comment-body"></textarea>
   </div>
 
-  <div>
-    <button type="submit">add comment</button>
+  <div class="input-group mb-3">
+    <button class="btn btn-primary" type="submit">add comment</button>
   </div>
 </form>
 
@@ -31,3 +33,4 @@
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
 <script src="/javascript/comment.js"></script>
+
