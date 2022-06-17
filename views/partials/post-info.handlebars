@@ -1,8 +1,10 @@
 <article class="m-3 post">
-  <div class="fs-5">
-    <p>{{post_text}}</p>
+
+  <div>
+    <h3 class="fs-4 fw-bold text-decoration-underline">{{title}}</h3>
+    <p class="fs-5 my-4">{{post_text}}</p>
   </div>
-  <div class="">
+  <div class="fw-semibold">
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
 </article>
